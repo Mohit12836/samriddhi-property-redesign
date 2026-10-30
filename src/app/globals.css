@@ -27,7 +27,7 @@
   }
 }
 
-/* ⚡ RUNNING LASER LIGHT BEAM */
+/* ⚡ RUNNING LASER LIGHT BEAM (100% VISIBLE AURA) */
 @keyframes laser-beam-spin {
   0% {
     background-position: 0% 50%;
@@ -40,37 +40,60 @@
   }
 }
 
+@keyframes wave-ambient-light {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(30px, -20px) scale(1.15);
+    opacity: 0.75;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.45;
+  }
+}
+
+.ambient-light-blob-1 {
+  animation: wave-ambient-light 7s ease-in-out infinite;
+}
+
+.ambient-light-blob-2 {
+  animation: wave-ambient-light 9s ease-in-out infinite reverse;
+}
+
 .laser-running-card {
   position: relative;
   border-radius: 1.5rem;
-  background: #FFFFFF;
-  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.1), 0 4px 6px -4px rgba(15, 23, 42, 0.05);
-  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.laser-running-card::before {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: inherit;
   padding: 3px;
   background: linear-gradient(
     90deg,
     #F59E0B 0%,
-    #06B6D4 30%,
-    #EC4899 60%,
-    #10B981 85%,
+    #06B6D4 25%,
+    #EC4899 50%,
+    #10B981 75%,
     #F59E0B 100%
   );
   background-size: 300% 300%;
-  animation: laser-beam-spin 3s linear infinite;
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-  z-index: 10;
+  animation: laser-beam-spin 4s linear infinite;
+  box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.2), 0 4px 12px -2px rgba(15, 23, 42, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.laser-running-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(245, 158, 11, 0.35), 0 8px 20px -4px rgba(6, 182, 212, 0.25);
+}
+
+.laser-running-card-inner {
+  border-radius: calc(1.5rem - 3px);
+  background: #FFFFFF;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* 💎 REAL FROSTED 3D GLASSMORPHISM CARD (EXACT AS USER IMAGE, IN LUXURY YELLOW/GOLD) */

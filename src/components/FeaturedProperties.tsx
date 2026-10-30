@@ -8,7 +8,10 @@ export default function FeaturedProperties() {
   const featured = sampleProperties.filter((p) => p.featured).slice(0, 6);
 
   return (
-    <section className="py-14 sm:py-20 bg-[#F8FAFC]">
+    <section className="relative py-14 sm:py-20 bg-[#F8FAFC] overflow-hidden">
+      {/* 🌊 Waving Ambient Light Aura */}
+      <div className="absolute top-1/4 -left-20 w-96 h-96 rounded-full bg-amber-200/35 blur-3xl pointer-events-none ambient-light-blob-1" />
+      <div className="absolute bottom-10 -right-20 w-96 h-96 rounded-full bg-cyan-200/35 blur-3xl pointer-events-none ambient-light-blob-2" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
           <div>

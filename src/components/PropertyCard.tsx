@@ -18,7 +18,8 @@ export default function PropertyCard({ property }: PropertyCardProps) {
     : null;
 
   return (
-    <div className="laser-running-card flex flex-col justify-between overflow-hidden">
+    <div className="laser-running-card group">
+      <div className="laser-running-card-inner">
       {/* 📸 FULL-SIZE SHARP HIGH-RESOLUTION ARCHITECTURE IMAGE */}
       <div className="relative aspect-16/11 w-full overflow-hidden bg-slate-100 rounded-t-2xl">
         <img
@@ -147,6 +148,7 @@ export default function PropertyCard({ property }: PropertyCardProps) {
             <span>साइट विजिट</span>
           </a>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -22,9 +22,10 @@ export default function HeroSection() {
 
   return (
     <section className="relative pt-4 pb-14 md:pt-8 md:pb-20 overflow-hidden bg-gradient-to-b from-amber-50/70 via-white to-[#F8FAFC]">
-      {/* Background Subtle Elements */}
-      <div className="absolute top-0 right-10 w-96 h-96 rounded-full bg-amber-200/30 blur-3xl pointer-events-none" />
-      <div className="absolute top-1/2 left-5 w-80 h-80 rounded-full bg-emerald-100/40 blur-3xl pointer-events-none" />
+      {/* Background Subtle Elements with Waving Ambient Light */}
+      <div className="absolute top-0 right-10 w-96 h-96 rounded-full bg-amber-200/40 blur-3xl pointer-events-none ambient-light-blob-1" />
+      <div className="absolute top-1/2 left-5 w-80 h-80 rounded-full bg-emerald-200/40 blur-3xl pointer-events-none ambient-light-blob-2" />
+      <div className="absolute -bottom-10 right-1/4 w-80 h-80 rounded-full bg-cyan-200/30 blur-3xl pointer-events-none ambient-light-blob-1" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-4">
@@ -102,7 +103,7 @@ export default function HeroSection() {
 
         {/* 💥 Search Box with Bright Laser Running Border */}
         <div className="mt-8 sm:mt-10 max-w-4xl mx-auto laser-running-card shadow-2xl">
-          <div className="p-4 sm:p-7 bg-white rounded-2xl">
+          <div className="laser-running-card-inner p-4 sm:p-7">
             {/* Quick Filter Tabs */}
             <div className="flex items-center gap-2 border-b border-slate-200 pb-4 mb-4 overflow-x-auto no-scrollbar">
               <button
