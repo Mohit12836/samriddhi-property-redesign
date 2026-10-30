@@ -47,21 +47,21 @@ export default function Header() {
       {/* 🔹 Main White Clear Nav */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          {/* Logo with Bold Gold Accent */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-12 h-12 rounded-2xl bg-[#0F172A] flex items-center justify-center text-amber-400 font-black text-2xl shadow-md border-2 border-amber-400 shrink-0 group-hover:scale-105 transition-transform">
+          {/* Logo with Bold Gold Accent & Fluid Responsive Auto-Fit */}
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-[#0F172A] flex items-center justify-center text-amber-400 font-black text-lg sm:text-2xl shadow-md border-2 border-amber-400 shrink-0 group-hover:scale-105 transition-transform">
               <span>स</span>
             </div>
             <div className="flex flex-col">
-              <div className="flex items-center gap-2">
-                <span className="font-black text-xl sm:text-2xl tracking-tight text-[#0F172A]">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <span className="font-black text-base sm:text-xl md:text-2xl tracking-tight text-[#0F172A] leading-tight">
                   {agencyConfig.name}
                 </span>
-                <span className="hidden sm:inline-flex text-[10px] font-black uppercase px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">
+                <span className="hidden md:inline-flex text-[9px] font-black uppercase px-1.5 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-300">
                   RERA Approved
                 </span>
               </div>
-              <span className="text-xs text-slate-600 font-bold">
+              <span className="text-[10px] sm:text-xs text-slate-600 font-bold leading-tight">
                 {agencyConfig.brokerName}
               </span>
             </div>
