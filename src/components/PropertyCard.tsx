@@ -121,10 +121,10 @@ export default function PropertyCard({ property }: PropertyCardProps) {
                   <span>{property.bathrooms} बाथ</span>
                 </div>
               )}
-              {property.roadWidthFeet && (
+              {property.roadWidth && (
                 <div className="flex items-center gap-1.5">
                   <Move className="w-3.5 h-3.5 text-slate-400" />
-                  <span>{property.roadWidthFeet} Ft रोड</span>
+                  <span>{property.roadWidth}</span>
                 </div>
               )}
               {property.facing && (
