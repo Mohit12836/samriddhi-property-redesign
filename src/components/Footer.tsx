@@ -4,10 +4,19 @@ import React from "react";
 import Link from "next/link";
 import { agencyConfig } from "@/config/agency";
 import { MapPin, Phone } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 export default function Footer() {
+  const { currentTheme } = useTheme();
+
   return (
-    <footer className="bg-[#0A0F1D] text-slate-300 pt-16 pb-20 border-t border-slate-800">
+    <footer 
+      className="text-slate-300 pt-16 pb-20 border-t transition-colors duration-300"
+      style={{
+        backgroundColor: currentTheme.colors.footerBg,
+        borderColor: currentTheme.colors.cardBorder
+      }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* 🏢 MAIN AGENCY FOOTER */}
